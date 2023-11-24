@@ -36,13 +36,12 @@ print("")
 
 # c.
 # Tính tổng doanh thu cửa hàng
-df_doanh_thu = df_thong_tin.merge(df_san_pham[['ID San Pham', 'Gia']], on='ID San Pham')
+df_doanh_thu = df_thong_tin.merge(df_san_pham[['ID San Pham', 'Gia']])
 df_doanh_thu['Thanh Tien'] = df_doanh_thu['So Luong'] * df_doanh_thu['Gia']
 df_doanh_thu = df_doanh_thu.groupby('ID Hoa Don')['Thanh Tien'].sum().reset_index()
 tong_tien_tat_ca = df_doanh_thu['Thanh Tien'].sum()
 dong_moi = pd.DataFrame({'ID Hoa Don': ['Tong Tien'], 'Thanh Tien': [tong_tien_tat_ca]})
-df_doanh_thu = pd.concat([df_doanh_thu, dong_moi], ignore_index=True)
-df_doanh_thu.fillna("", inplace=True)
+df_doanh_thu = pd.concat([df_doanh_thu, dong_moi])
 print("--- Tổng doanh thu cửa hàng:")
 print(df_doanh_thu)
 print("")
