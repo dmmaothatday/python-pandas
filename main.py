@@ -1,9 +1,10 @@
 import pandas as pd
+
 # a. Đọc dữ liệu từ Excel
-df_san_pham = pd.read_excel('DuLieuThucHanh2_V1.xlsx',sheet_name = 'San Pham')
-df_nhan_vien = pd.read_excel('DuLieuThucHanh2_V1.xlsx',sheet_name = 'Nhan Vien')
-df_hoa_don = pd.read_excel('DuLieuThucHanh2_V1.xlsx',sheet_name = 'Hoa Don')
-df_thong_tin = pd.read_excel('DuLieuThucHanh2_V1.xlsx',sheet_name = 'Thong Tin Hoa Don')
+df_san_pham = pd.read_excel('DuLieuThucHanh2_V1.xlsx', sheet_name='San Pham')
+df_nhan_vien = pd.read_excel('DuLieuThucHanh2_V1.xlsx', sheet_name='Nhan Vien')
+df_hoa_don = pd.read_excel('DuLieuThucHanh2_V1.xlsx', sheet_name='Hoa Don')
+df_thong_tin = pd.read_excel('DuLieuThucHanh2_V1.xlsx', sheet_name='Thong Tin Hoa Don')
 # Hiển thị DataFrames
 print(df_san_pham)
 print(df_nhan_vien)
