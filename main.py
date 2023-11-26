@@ -52,3 +52,12 @@ df_san_pham['So Luong'] = df_san_pham['So Luong'] - df_ban_hang['So Luong']
 print("--- Số lượng sản phẩm sau khi trừ hết số lượng đã bán:")
 print(df_san_pham)
 print("")
+
+''' f.
+ Vẽ biểu đồ cho dataframe đã tạo ở câu b. Chon biểu đồ tròn, vì biểu đồ tròn
+  sử dụng để hiển thị phần trăm cửa hàng đã bán của sản phẩm bán chạy nhất so với tổng số lượng sản phẩm, hoặc phần trăm doanh thu từ sản phẩm bán chạy nhất so với tổng doanh thu'''
+plt.figure(figsize=(8, 8))
+plt.pie(df_ban_hang['So Luong'], labels=df_ban_hang['Ten'], autopct='%1.1f%%', startangle=140)
+plt.title('Phần trăm Số Lượng Sản Phẩm Đã Bán')
+plt.show()
+print("")
